@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Faculty Feedback Form</h2>
+    <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_self">
+      <label for="name">Your Name (Optional):</label>
+      <input type="text" id="name" name="entry.1234567890">
+
+      <label for="faculty">Select Faculty:</label>
+      <select id="faculty" name="entry.0987654321" required>
+        <option value="">-- Select Faculty --</option>
+        <option value="Prof. A">Prof. A</option>
+        <option value="Prof. B">Prof. B</option>
+        <option value="Prof. C">Prof. C</option>
+      </select>
+
+      <label for="subject">Subject Taught:</label>
+      <input type="text" id="subject" name="entry.1111111111" required>
+
+      <label for="rating">Overall Rating (1 = Poor, 5 = Excellent):</label>
+      <select id="rating" name="entry.2222222222" required>
+        <option value="">-- Select Rating --</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="entry.3333333333" rows="4" placeholder="Write your feedback here..."></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>
